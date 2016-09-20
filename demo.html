@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../component/jquery/jquery.js"></script>
+    <script src="../../component/ckeditor_3.6.6.2/ckeditor_source.js"></script>
+</head>
+<body>
+    <div id="demo">
+        <textarea  id="xx">
+            <iframe frameborder="1" height="100" scrolling="yes" src="https://www.baidu.com/" width="100%"></iframe>
+        </textarea>
+    </div>
+
+    <script>
+        debugger;
+        CKEDITOR.replace("xx",{
+            //toolbar : [['MyToolbar']],//config.toolbar = 'Full';
+           // extraPlugins : 'HelloWorld',
+            toolbarCanCollapse : true
+        });
+        /*
+         var element = CKEDITOR.dom.element.createFromHtml( '<iframe src="https://www.baidu.com/" width="100%" height="300"></iframe>' );
+         CKEDITOR.instances.xx.insertElement( element );
+        */
+    </script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+<!--
+[IF ie]
+For those who are using CE 6.0.6, the bug is caused by missing DOCTYPE in ckeditor.jsp. If you add DOCTYPE declaration (and maybe delete leading whitespace), it should fix the problem.
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+-->
